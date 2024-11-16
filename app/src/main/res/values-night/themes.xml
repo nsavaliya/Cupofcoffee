@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CupofCoffee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/brown1</item>
+        <item name="colorPrimaryVariant">@color/brown2</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/brown3</item>
+        <item name="colorSecondaryVariant">@color/brown3</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/brown3</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/brown1</item>
+    </style>
+</resources>

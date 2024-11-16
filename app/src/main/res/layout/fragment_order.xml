@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.order.OrderFragment">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:text="@string/select_a_coffee"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_26sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coffee_option_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/disable_btn_bg"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/americano"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/coffee_option_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/coffee_option_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/disable_btn_bg"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/cappuccino"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coffee_option_1"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/coffee_option_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/disable_btn_bg"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/latte"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/coffee_option_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_option_1" />
+
+        <TextView
+            android:id="@+id/coffee_option_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/disable_btn_bg"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/macchiato"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coffee_option_3"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_option_2" />
+
+        <TextView
+            android:id="@+id/select_size_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:text="@string/select_a_size"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_26sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_option_3"/>
+
+        <RadioGroup
+            android:id="@+id/coffee_size_rg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/select_size_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/small_size_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/small"
+                android:textColor="@color/brown3"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                android:buttonTint="@color/brown3"
+                />
+
+            <RadioButton
+                android:id="@+id/medium_size_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/medium"
+                android:textColor="@color/brown3"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                android:buttonTint="@color/brown3" />
+
+            <RadioButton
+                android:id="@+id/large_size_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/large"
+                android:textColor="@color/brown3"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                android:buttonTint="@color/brown3" />
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/size_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="coffee_size_rg,select_size_title"
+            />
+
+        <TextView
+            android:id="@+id/options_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:text="@string/options"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_26sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_size_rg"/>
+
+        <CheckBox
+            android:id="@+id/two_shots_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_2_shots"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:buttonTint="@color/brown3"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/options_title" />
+        <CheckBox
+            android:id="@+id/sugar_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sugar"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_12sdp"
+            android:buttonTint="@color/brown3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/two_shots_cb" />
+        <CheckBox
+            android:id="@+id/cream_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cream"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_12sdp"
+            android:buttonTint="@color/brown3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sugar_cb" />
+        <CheckBox
+            android:id="@+id/whole_milk_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/whole_milk"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_12sdp"
+            android:buttonTint="@color/brown3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cream_cb" />
+        <CheckBox
+            android:id="@+id/two_percent_milk_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_2_milk"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_12sdp"
+            android:buttonTint="@color/brown3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whole_milk_cb" />
+        <CheckBox
+            android:id="@+id/non_fat_milk_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/non_fat_milk"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_12sdp"
+            android:buttonTint="@color/brown3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/two_percent_milk_cb" />
+        <CheckBox
+            android:id="@+id/almond_milk_cb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/almond_milk"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_12sdp"
+            android:buttonTint="@color/brown3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/non_fat_milk_cb" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/options_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="almond_milk_cb,non_fat_milk_cb,two_percent_milk_cb, whole_milk_cb, cream_cb,sugar_cb,two_shots_cb, options_title"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continue_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_"
+            android:gravity="center"
+            android:textSize="@dimen/_24sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/disable_btn_bg"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/almond_milk_cb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

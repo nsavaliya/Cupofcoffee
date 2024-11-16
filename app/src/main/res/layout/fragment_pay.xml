@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_12sdp"
+        tools:context=".ui.pay.PayFragment">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:text="@string/enter_pickup_info"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_26sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/full_name_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:text="@string/full_name"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+        <EditText
+            android:id="@+id/full_name_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_name_here"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/full_name_title"
+            />
+
+        <TextView
+            android:id="@+id/phone_number_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:text="@string/phone_number"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/full_name_et" />
+
+
+        <EditText
+            android:id="@+id/phone_number_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:ems="10"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:hint="@string/_444_444_444"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_title" />
+
+        <TextView
+            android:id="@+id/pick_up_time_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:text="@string/pickup_time"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_et" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pick_up_time_title" />
+
+
+        <TextView
+            android:id="@+id/payment_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:text="@string/enter_payment_info"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_26sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+        <TextView
+            android:id="@+id/card_type_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:text="@string/card_type"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_title" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/card_type_title"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/card_type_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="card_type_title, spinner, payment_title"
+            />
+
+        <TextView
+            android:id="@+id/card_number_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:text="@string/card_number"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+
+        <EditText
+            android:id="@+id/card_number_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:ems="10"
+            android:inputType="phone"
+            android:maxLength="16"
+            android:hint="@string/_1234123412341234"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number_title" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/card_number_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="card_number_et, card_number_title"
+            />
+
+        <TextView
+            android:id="@+id/card_expiry_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:text="@string/card_expiry"
+            android:textColor="@color/brown3"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number_et" />
+
+
+        <EditText
+            android:id="@+id/card_expiry_month_et"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/mm"
+            android:maxLength="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_expiry_title"/>
+
+        <TextView
+            android:id="@+id/divider_tv"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="/"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/card_expiry_month_et"
+            app:layout_constraintStart_toEndOf="@+id/card_expiry_month_et"
+            app:layout_constraintTop_toTopOf="@+id/card_expiry_month_et" />
+
+        <EditText
+            android:id="@+id/card_expiry_year_et"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/yyyy"
+            android:maxLength="4"
+            app:layout_constraintStart_toEndOf="@+id/divider_tv"
+            app:layout_constraintTop_toBottomOf="@+id/card_expiry_title"/>
+
+        <EditText
+            android:id="@+id/cvc_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:hint="@string/stars"
+            android:maxLength="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_expiry_year_et" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/card_expiry_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="cvc_et, card_expiry_year_et, divider_tv, card_expiry_month_et, card_expiry_title"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/place_order_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/place_order"
+            android:gravity="center"
+            android:textSize="@dimen/_24sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/disable_btn_bg"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/cvc_et"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
